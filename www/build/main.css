@@ -4754,6 +4754,10 @@ ion-multi-picker {
   color: #222;
 }
 
+.ion-alpha-list.list {
+  margin: 0;
+}
+
 ion-alpha-scroll {
   position: absolute;
   top: 0;
@@ -4766,7 +4770,13 @@ ion-alpha-scroll {
   border-right: none;
 }
 
+.ion-alpha-list > div:last-child .item .item-inner {
+  border-bottom: none;
+}
+
 .ion-alpha-sidebar {
+  margin: 0;
+  padding: 15px 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -4782,7 +4792,7 @@ ion-alpha-scroll {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  z-index: 50000;
+  z-index: 999;
 }
 
 .ion-alpha-sidebar li {
