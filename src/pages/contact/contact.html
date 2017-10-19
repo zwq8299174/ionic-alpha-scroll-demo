@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      联系人
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-alpha-scroll *ngIf="contacts.length>0" [listData]="contacts" key="name" [itemTemplate]="alphaScrollItemTemplate" [currentPageClass]="currentPageClass"></ion-alpha-scroll>
+</ion-content>
+<ng-template #alphaScrollItemTemplate let-item="item" let-currentPageClass="currentPageClass">
+	<ion-item (click)="currentPageClass.onItemClick(item)">
+		<h2>{{item?.name}}</h2>
+	</ion-item>
+</ng-template>

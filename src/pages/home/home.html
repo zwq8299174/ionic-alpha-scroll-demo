@@ -1,0 +1,16 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>选车</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-alpha-scroll *ngIf="brands.length>0" [listData]="brands" key="initial" [itemTemplate]="alphaScrollItemTemplate" [currentPageClass]="currentPageClass"></ion-alpha-scroll>
+</ion-content>
+<ng-template #alphaScrollItemTemplate let-item="item" let-currentPageClass="currentPageClass">
+	<ion-item (click)="currentPageClass.onItemClick(item)">
+		<ion-thumbnail item-left>
+			<img [src]="item.logo"/>
+		</ion-thumbnail>
+		<h2>{{item?.name}}</h2>
+	</ion-item>
+</ng-template>
